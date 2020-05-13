@@ -8,7 +8,7 @@ on:
 
 jobs:
    test:
-    name: Unit Test
+     name: Unit tests and .jar builder
     runs-on: ubuntu-18.04
     
     steps:

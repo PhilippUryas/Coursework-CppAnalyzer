@@ -13,6 +13,6 @@ public class FileWalkerTest {
         test.add("src\\test\\java\\resources\\cppFolder\\main.cpp");
         test.add("src\\test\\java\\resources\\cppFolder\\main.h");
 
-        assertEquals(test, new FileWalker("").getAllPathsToFilesInDirectory());
+        assertEquals(test, new FileWalker("src\\test\\java\\resources\\cppFolder").getAllPathsToFilesInDirectory());
     }
 }
