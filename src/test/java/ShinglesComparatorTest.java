@@ -1,5 +1,6 @@
 import Shingles.HashCodeFiller;
 import Shingles.ShingleParser;
+import main.ShinglesComparator;
 import org.junit.Before;
 import org.junit.Test;
 

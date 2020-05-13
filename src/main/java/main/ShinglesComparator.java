@@ -1,8 +1,10 @@
+package main;
+
 import java.util.ArrayList;
 
 public class ShinglesComparator {
 
-    ShinglesComparator() {
+    public ShinglesComparator() {
     }
 
     public float compare(ArrayList<Integer> sourceHashes, ArrayList<Integer> targetHashes) {
