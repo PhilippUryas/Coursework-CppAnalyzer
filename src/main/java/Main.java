@@ -5,23 +5,21 @@ import java.io.File;
 
 public class Main {
     public static void main(String[] args) {
-        for (int i = 0; i < 10; i++) {
-            System.out.println(i);
-
+        {
             for (String s :
-                    new FileWalker("src\\test\\java\\resources\\sourceTest").getAllPathsToFilesInDirectory()) {
+                    new FileWalker(args[0]).getAllPathsToFilesInDirectory()) {
                 for (String t :
-                        new FileWalker("src\\test\\java\\resources\\targerTest").getAllPathsToFilesInDirectory()) {
+                        new FileWalker(args[1]).getAllPathsToFilesInDirectory()) {
 
                     System.out.print(new ShinglesComparator().compare(
                             new HashCodeFiller
                                     (new ShingleParser
-                                            (new File(s), i)
+                                            (new File(s), 3)
                                             .getShingles())
                                     .getHashCodes(),
                             new HashCodeFiller
                                     (new ShingleParser
-                                            (new File(t), i)
+                                            (new File(t), 3)
                                             .getShingles())
                                     .getHashCodes()) * 100 + "%");
                     System.out.print(" " + s + " " + t + " ");
@@ -31,7 +29,7 @@ public class Main {
 
             System.out.println("\n\n\n");
 
-        }
 
+        }
     }
 }
